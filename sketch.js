@@ -1,4 +1,6 @@
 function setup(){
+    alert("Focus on colors and rapid change. Move mouse around the screen to see how the background and balls interact with color. (epilepsy warning)")
+
     createCanvas(windowWidth, windowHeight);
 
     ball = new Ball(random(0,20),random(0,20));
@@ -17,9 +19,12 @@ function draw(){
         background(130,130,130);
         ball.updateColor();
     }
-    else if(mouseX > 500){
+    else if(mouseX > 500 && mouseX < 850){
         background(25,52,25);
         ball.updateColor();
+    }
+    else if(mouseX > 850){
+        background(6,7,8);
     }
     
     
